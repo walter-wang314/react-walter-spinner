@@ -1,0 +1,20 @@
+{
+  "name": "react-walter-spinner",
+  "version": "1.0.0",
+  "description": "React CSS Spinner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@wzc314159.github.com:walter-wang314/react-walter-spinner.git"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "spinner"
+  ],
+  "author": "walter",
+  "license": "MIT"
+}
