@@ -1,7 +1,3 @@
-import React from 'react';
+export * from './Ellipsis';
 
-const Spinner = (props) => {
-  return <h1>Spinner</h1>;
-};
-
-export default Spinner;
+export * from './Ring';
