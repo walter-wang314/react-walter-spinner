@@ -6,7 +6,6 @@ const Ring = (props) => (
   <>
     <style>{styles}</style>
     <div className="lds-spinner">
-      <span></span>
       <div></div>
       <div></div>
       <div></div>
