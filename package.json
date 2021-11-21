@@ -6,13 +6,27 @@
   "module": "dist/bundle.esm.js",
   "sideEffect": false,
   "scripts": {
+    "lint": "eslint '**/*.js'",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production rollup -c",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:cover": "jest --coverage"
+    "test:cover": "jest --coverage",
+    "test:staged": "jest --findRelatedTests"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint",
+      "npm run test:staged",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -44,7 +58,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-react": "^7.27.0",
+    "husky": "^7.0.4",
     "jest": "^27.3.1",
+    "lint-staged": "^12.0.3",
     "prettier-eslint": "^13.0.0",
     "prettier-eslint-cli": "^5.0.1",
     "react-test-renderer": "^17.0.2",
