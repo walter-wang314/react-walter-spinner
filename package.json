@@ -17,16 +17,10 @@
     "test:cover": "jest --coverage",
     "test:staged": "jest --findRelatedTests"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,jsx}": [
       "npm run lint",
-      "npm run test:staged",
-      "git add"
+      "npm run test:staged"
     ]
   },
   "repository": {
