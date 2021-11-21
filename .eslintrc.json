@@ -5,7 +5,8 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "standard"
+    "standard",
+    "plugin:jest/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
