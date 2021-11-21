@@ -22,7 +22,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,jsx}": [
       "npm run lint",
       "npm run test:staged",
       "git add"
